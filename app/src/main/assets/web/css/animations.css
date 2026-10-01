@@ -1,0 +1,45 @@
+/* Music Maker — motion. Transform/opacity only, so it stays smooth on mid-range phones. */
+
+@keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: .45; transform: scale(.8); } }
+@keyframes breathe { 0%, 100% { transform: scale(.92); opacity: .85; } 50% { transform: scale(1.06); opacity: 1; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes rise-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes sheet-in { from { transform: translateY(100%); } to { transform: none; } }
+@keyframes sheet-out { from { transform: none; } to { transform: translateY(100%); } }
+@keyframes push-in { from { opacity: 0; transform: translateX(28px); } to { opacity: 1; transform: none; } }
+@keyframes push-out { from { opacity: 1; transform: none; } to { opacity: 0; transform: translateX(28px); } }
+@keyframes under-out { from { opacity: 1; transform: none; } to { opacity: .6; transform: translateX(-12px); } }
+@keyframes under-in { from { opacity: .6; transform: translateX(-12px); } to { opacity: 1; transform: none; } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(12px) scale(.98); } to { opacity: 1; transform: none; } }
+@keyframes shimmer { from { background-position: -200% 0; } to { background-position: 200% 0; } }
+@keyframes bar-dance { 0%, 100% { transform: scaleY(.45); } 50% { transform: scaleY(1); } }
+
+.screen.enter-push { animation: push-in .3s var(--ease) both; }
+.screen.leave-push { animation: under-out .3s var(--ease) both; }
+.screen.leave-pop { animation: push-out .26s var(--ease) both; }
+.screen.enter-pop { animation: under-in .26s var(--ease) both; }
+.screen.enter-tab { animation: fade-in .22s ease both; }
+
+.stagger > * { animation: rise-in .42s var(--ease) both; }
+.stagger > *:nth-child(2) { animation-delay: .04s; }
+.stagger > *:nth-child(3) { animation-delay: .08s; }
+.stagger > *:nth-child(4) { animation-delay: .12s; }
+.stagger > *:nth-child(5) { animation-delay: .16s; }
+.stagger > *:nth-child(6) { animation-delay: .2s; }
+.stagger > *:nth-child(n+7) { animation-delay: .24s; }
+
+.backdrop { animation: fade-in .2s ease both; }
+.backdrop.closing { animation: fade-in .18s ease reverse both; }
+.sheet { animation: sheet-in .32s var(--ease) both; }
+.backdrop.closing .sheet { animation: sheet-out .2s ease-in both; }
+.toast { animation: toast-in .28s var(--ease) both; }
+.toast.leaving { animation: toast-in .2s ease reverse both; }
+
+.hero .bars i { transform-origin: center; animation: bar-dance 1.6s ease-in-out infinite; }
+.hero .bars i:nth-child(2) { animation-delay: .15s; }
+.hero .bars i:nth-child(3) { animation-delay: .3s; }
+.hero .bars i:nth-child(4) { animation-delay: .45s; }
+.hero .bars i:nth-child(5) { animation-delay: .6s; }
+
+.skeleton { border-radius: 12px; background: linear-gradient(90deg, var(--card) 25%, var(--card-2) 50%, var(--card) 75%); background-size: 200% 100%; animation: shimmer 1.4s linear infinite; }
+.play-btn.playing { animation: breathe 2.4s ease-in-out infinite; }

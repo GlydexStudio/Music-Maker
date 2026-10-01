@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Five-bar waveform mark, centred in the adaptive icon safe zone. -->
+    <path android:fillColor="#A78BFA" android:pathData="M33,48h5a2,2 0 0 1 2,2v8a2,2 0 0 1 -2,2h-5a2,2 0 0 1 -2,-2v-8a2,2 0 0 1 2,-2z" />
+    <path android:fillColor="#C4B5FD" android:pathData="M43,40h5a2,2 0 0 1 2,2v24a2,2 0 0 1 -2,2h-5a2,2 0 0 1 -2,-2v-24a2,2 0 0 1 2,-2z" />
+    <path android:fillColor="#F5F5F7" android:pathData="M53,32h5a2,2 0 0 1 2,2v40a2,2 0 0 1 -2,2h-5a2,2 0 0 1 -2,-2v-40a2,2 0 0 1 2,-2z" />
+    <path android:fillColor="#C4B5FD" android:pathData="M63,42h5a2,2 0 0 1 2,2v20a2,2 0 0 1 -2,2h-5a2,2 0 0 1 -2,-2v-20a2,2 0 0 1 2,-2z" />
+    <path android:fillColor="#A78BFA" android:pathData="M73,49h5a2,2 0 0 1 2,2v6a2,2 0 0 1 -2,2h-5a2,2 0 0 1 -2,-2v-6a2,2 0 0 1 2,-2z" />
+</vector>

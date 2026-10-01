@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Maker</string>
+    <string name="download_title">Music Maker AI model</string>
+    <string name="download_description">Qwen3 1.7B for on-device songwriting</string>
+    <string name="share_chooser">Share with</string>
+    <string name="webview_missing">Android System WebView is missing or out of date. Please update it from the Play Store.</string>
+</resources>
